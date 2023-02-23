@@ -21,7 +21,7 @@ page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
 background-image: url("data:image/jpg;base64,{img}");
-background-size: 100%;
+background-size: 170%;
 background-position: top left;
 background-repeat: no-repeat;
 background-attachment: local;
@@ -41,7 +41,14 @@ right: 2rem;
 </style>
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
-
+# hide_st_style = """
+#             <style>
+#             #MainMenu {visibility: hidden;}
+#             footer {visibility: hidden;}
+#             header {visibility: hidden;}
+#             </style>
+#             """
+# st.markdown(hide_st_style, unsafe_allow_html=True)
 st.title('Profanity check Application for Images and Text Data')
 
 st.markdown('''
