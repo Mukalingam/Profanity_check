@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+  profanity-check-ui:
+    container_name: profanity-check-ui
+    image: devopssf/profanity-check-ui:latest
+    command: >
+      sh -c "streamlit run 🏡_Home.py --server.port=8082"
+    restart: always
+    volumes:
+      - ./:/profanity-check-ui
+    ports:
+      - "5016:8082"
